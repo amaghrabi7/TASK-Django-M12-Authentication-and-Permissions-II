@@ -27,4 +27,5 @@ urlpatterns = [
     path("movies/add/", movie_views.create_movie, name="create-movie"),
     path("register/", user_views.user_register, name="register"),
     path("logout/", user_views.logout_user, name="logout"),
+    path("login/", user_views.login_user, name="login"),
 ]

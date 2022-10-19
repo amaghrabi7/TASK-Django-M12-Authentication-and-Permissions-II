@@ -4,13 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Register</title>
+    <title>Login</title>
   </head>
   <body>
-    <form action="{% url 'register' %}" method="POST">
+    <form action="{% url 'login' %}" method="POST">
       {% csrf_token %}{{form}}
-      <button type="submit">Register</button>
-      <a href="{% url 'login' %}">Login</a>
+      <button type="submit">Login</button>
+      <a href="{% url 'register' %}">Register</a>
     </form>
   </body>
 </html>
