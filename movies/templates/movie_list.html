@@ -88,6 +88,8 @@
         </section>
         {% else %}
         <p>Seems like no movies are any good nowadays :(</p>
+        {% endif %} {% if request.user.is_authenticated %}
+        <a href="{% url 'create-movie' %}">Add Movie</a>
         {% endif %}
       </article>
     </main>

@@ -5,6 +5,8 @@ from django.shortcuts import redirect, render
 from movies.forms import MovieForm
 from movies.models import Movie
 
+from django.contrib.auth.decorators import login_required
+
 
 def get_movies(request ):
     movies = Movie.objects.all()
@@ -25,7 +27,7 @@ def get_movie(request, movie_id):
     }
     return render(request, "movie_detail.html", context)
 
-
+@login_required
 def create_movie(request):
     form = MovieForm()
     if request.method == "POST":
